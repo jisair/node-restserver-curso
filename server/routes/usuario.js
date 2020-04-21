@@ -79,7 +79,7 @@ app.put('/usuario/:id', [verificaToken, verificaAdminRole], function(req, res) {
     let id = req.params.id;
     let body = _.pick(req.body, ['nombre', 'email', 'img', 'rol', 'estado']);
 
-    Usuario.findByIdAndUpdate(id, body, {
+    Categoria.findByIdAndUpdate(id, body, {
             new: true,
             runValidators: true
         },
